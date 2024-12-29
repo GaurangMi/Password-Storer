@@ -4,7 +4,7 @@ def __main__():
     from tinydb import TinyDB, Query
     from cryptography.fernet import Fernet
     db = TinyDB('encryptedpasses.json')
-    fernet = Fernet(b'mqwcpl01sdxRXX5adA-Boj_CrJNCLxLVtnMH4vwQWjo=')    #CHANGE THIS when you initially download this project, this key is publically available so change it using Fernet.generate_key()
+    fernet = Fernet(#GENERATE YOUR OWN KEY using using Fernet.generate_key()) #SAVE THIS KEY OTHERWISE UR PASSWORDS WILL BE UNDECEYPRABLE   
                                                                         #Do not change THIS if you are not remaking your db. Otherwise your previousely used passwords will be undecrptable
     doing = int(input("Enter\n1 - New password\n2 - Find password\n3 - Print all passwords\n4 - Quit\n= "))
     if doing == 1:
